@@ -12,10 +12,10 @@
 <div class="container">
     <div class = "row">
         <div class ="row">
-            <input type="text" placeholder="Wpisz zadanie do wykonania">
+            <input type="text" placeholder="Wpisz zadanie do wykonania" #todoText>
         </div>
         <div>
-            <!--wywolanie funkcji addItem()-->
+            <button (click)="addItem(todoText.value)">DODAJ</button>
         </div>
     </div>
 </div>
