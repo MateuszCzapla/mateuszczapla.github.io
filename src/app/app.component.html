@@ -7,11 +7,12 @@
         </div>
     </nav>
 </div>
-<h6>Liczba elementów: {{itemCount}}</h6>
+<!--<h6>Liczba elementów: {{itemCount}}</h6>-->
+<h6>Zadania{{ showComplete ? "":" pozostałe do wykonania" }}: {{itemCount}}</h6>
 
 <div class="container">
-    <div class = "row">
-        <div class ="row">
+    <div class="row">
+        <div class="row">
             <input type="text" placeholder="Wpisz zadanie do wykonania" #todoText>
         </div>
         <div>
@@ -35,14 +36,22 @@
             <!--<td><input type="button" [(ngModel)] = "item.complete"></td>-->
             <td>
                 <label>
-                    <input type="checkbox" class="filled-in" [(ngModel)] = "item.complete"/>
+                    <input type="checkbox" class="filled-in" [(ngModel)]="item.complete" />
                     <span></span>
                 </label>
             </td>
-            <td [ngSwitch]="item.complete">
+            <!--<td [ngSwitch]="item.complete">
                 <span *ngSwitchCase="true">TAK</span>
-                <span *ngSwitchDefault>NIE</span> 
-            </td>
+                <span *ngSwitchDefault>NIE</span>
+            </td>-->
         </tr>
     </tbody>
 </table>
+<div>
+    <div>
+        <label>
+            <input type="checkbox" class="filled-in" [(ngModel)]="showComplete"><span></span>
+        </label>
+        <label for="defaultCheck1">Pokaż zadania</label>
+    </div>
+</div>
