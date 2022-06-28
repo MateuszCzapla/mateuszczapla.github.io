@@ -8,6 +8,9 @@ import { TodoList } from './todoList';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  title(title: any) {
+    throw new Error('Method not implemented.');
+  }
   private list = new TodoList("Tomek", [
     new TodoItem("Pograć w grę planszową :)", true),
     new TodoItem("Pograć w grę komputerową :)"),
